@@ -12,7 +12,8 @@ int main() {
     
     while (1) {
         // Switch the Red LED on
-        *(unsigned int *)0x400253FCU = 0x02U;        // GPIO Data (GPIODATA)
+        *(unsigned int *)0x400253FCU = 0x02U;        // GPIO Data (GPIODATA) register address: 0x40025000
+                                                     // + bit mask [9:2] set for all: 11 1111 11 00 -> 0x3FC
         // Delay
         int counter = 0;
         while (counter < 1000000) {

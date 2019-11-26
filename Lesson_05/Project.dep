@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>701661342</fileChecksum>
+    <fileChecksum>2376280</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -17,6 +17,7 @@
             <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
             <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
             <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\tm4c123gh6pm.h</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
@@ -43,6 +44,12 @@
                     <file> 6</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 12</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\Project.out</name>
@@ -59,6 +66,10 @@
                 </tool>
             </inputs>
         </file>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\main.c</name>
+            <tool>C-STAT</tool>
+        </forcedrebuild>
     </configuration>
     <configuration>
         <name>Release</name>
