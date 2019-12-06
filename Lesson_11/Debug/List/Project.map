@@ -1,0 +1,203 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  06/Dec/2019  13:03:58
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =  C:\Embedded_Programming\Lesson_11\Debug\Exe\Project.out
+#    Map file     =  C:\Embedded_Programming\Lesson_11\Debug\List\Project.map
+#    Command line =
+#        -f C:\Users\twojtasz\AppData\Local\Temp\EW1307.tmp
+#        (C:\Embedded_Programming\Lesson_11\Debug\Obj\delay.o
+#        C:\Embedded_Programming\Lesson_11\Debug\Obj\main.o --no_out_extension
+#        -o C:\Embedded_Programming\Lesson_11\Debug\Exe\Project.out --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        C:\Embedded_Programming\Lesson_11\Debug\List\Project.map --config
+#        C:\Embedded_Programming\Lesson_11\Project.icf --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 0, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                     0x40
+  .intvec          ro code          0x0   0x40  vector_table_M.o [4]
+                                 - 0x40   0x40
+
+"P1":                                    0x204
+  .text            ro code         0x40  0x104  main.o [1]
+  .text            ro code        0x144   0x14  delay.o [1]
+  .text            ro code        0x158   0x3a  zero_init3.o [4]
+  .text            ro code        0x192    0x2  vector_table_M.o [4]
+  .text            ro code        0x194   0x28  data_init.o [4]
+  .text            ro code        0x1bc   0x22  fpinit_M.o [3]
+  .iar.init_table  const          0x1e0   0x10  - Linker created -
+  .text            ro code        0x1f0   0x1e  cmain.o [4]
+  .text            ro code        0x20e    0x4  low_level_init.o [2]
+  .text            ro code        0x212    0x4  exit.o [2]
+  .text            ro code        0x218    0xa  cexit.o [4]
+  .text            ro code        0x224   0x14  exit.o [5]
+  .text            ro code        0x238    0xc  cstartup_M.o [4]
+  .rodata          const          0x244    0x0  zero_init3.o [4]
+                                - 0x244  0x204
+
+"P2", part 1 of 2:                        0x14
+  .bss             zero     0x2000'0000    0x4  main.o [1]
+  .bss             zero     0x2000'0004    0x4  main.o [1]
+  .bss             zero     0x2000'0008    0x4  main.o [1]
+  .bss             zero     0x2000'000c    0x2  main.o [1]
+  .bss             zero     0x2000'000e    0x2  main.o [1]
+  .bss             zero     0x2000'0010    0x1  main.o [1]
+  .bss             zero     0x2000'0011    0x1  main.o [1]
+                          - 0x2000'0012   0x12
+
+"P2", part 2 of 2:                       0x400
+  CSTACK                    0x2000'0018  0x400  <Block>
+    CSTACK         uninit   0x2000'0018  0x400  <Block tail>
+                          - 0x2000'0418  0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x244     0x3'ffff  0x3'fdbc
+  0x2000'0014  0x2000'0017       0x4
+  0x2000'0418  0x2000'7fff    0x7be8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x12:
+          0x2000'0000  0x12
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+C:\Embedded_Programming\Lesson_11\Debug\Obj: [1]
+    delay.o                20
+    main.o                260                18
+    -------------------------------------------
+    Total:                280                18
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [3]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [4]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    data_init.o            40
+    vector_table_M.o       66
+    zero_init3.o           58
+    -------------------------------------------
+    Total:                216
+
+shb_l.a: [5]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    4        2
+    Linker created                  16    1'024
+-----------------------------------------------
+    Grand Total:          562       18    1'042
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x1e0          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x1f0          --   Gb  - Linker created -
+?main                         0x1f1         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x2000'0018          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0418          --   Gb  - Linker created -
+Region$$Table$$Base           0x1e0          --   Gb  - Linker created -
+Region$$Table$$Limit          0x1f0          --   Gb  - Linker created -
+__cmain                       0x1f1         Code  Gb  cmain.o [4]
+__exit                        0x225   0x14  Code  Gb  exit.o [5]
+__iar_data_init3              0x195   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0x1bd         Code  Gb  fpinit_M.o [3]
+__iar_program_start           0x239         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3              0x159   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init              0x20f    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [4]
+_call_main                    0x1fd         Code  Gb  cmain.o [4]
+_exit                         0x219         Code  Gb  cexit.o [4]
+_main                         0x20b         Code  Gb  cmain.o [4]
+delay                         0x145   0x14  Code  Gb  delay.o [1]
+exit                          0x213    0x4  Code  Gb  exit.o [2]
+main                           0x41  0x104  Code  Gb  main.o [1]
+s32                     0x2000'0008    0x4  Data  Gb  main.o [1]
+u16c                    0x2000'000c    0x2  Data  Gb  main.o [1]
+u16d                    0x2000'000e    0x2  Data  Gb  main.o [1]
+u32e                    0x2000'0000    0x4  Data  Gb  main.o [1]
+u32f                    0x2000'0004    0x4  Data  Gb  main.o [1]
+u8a                     0x2000'0010    0x1  Data  Gb  main.o [1]
+u8b                     0x2000'0011    0x1  Data  Gb  main.o [1]
+
+
+[1] = C:\Embedded_Programming\Lesson_11\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+    562 bytes of readonly  code memory
+     18 bytes of readonly  data memory
+  1'042 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
