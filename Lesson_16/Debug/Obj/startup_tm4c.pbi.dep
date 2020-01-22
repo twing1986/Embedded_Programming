@@ -1,5 +1,5 @@
-startup_tm4c.pbi: C:\Embedded_Programming\Lesson_15\startup_tm4c.c \
-  C:\Embedded_Programming\Lesson_15/tm4c_cmsis.h \
+startup_tm4c.pbi: C:\Embedded_Programming\Lesson_16\startup_tm4c.c \
+  C:\Embedded_Programming\Lesson_16/tm4c_cmsis.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\CMSIS\Core\Include\core_cm4.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
