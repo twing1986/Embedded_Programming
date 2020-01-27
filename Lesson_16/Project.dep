@@ -6,11 +6,11 @@
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\bsp.c</file>
-            <file>$PROJ_DIR$\delay.c</file>
-            <file>$PROJ_DIR$\delay.h</file>
             <file>$PROJ_DIR$\main.c</file>
             <file>$PROJ_DIR$\startup_tm4c.c</file>
             <file>$PROJ_DIR$\tm4c_cmsis.h</file>
+            <file>$PROJ_DIR$\delay.c</file>
+            <file>$PROJ_DIR$\delay.h</file>
             <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
             <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
             <file>$PROJ_DIR$\Project.icf</file>
@@ -73,30 +73,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 38 5 27 6 7 19 18 17 16 23 28 29 30 31</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\delay.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 24</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 13</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 10</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 2</file>
+                    <file> 38 3 27 6 7 19 18 17 16 23 28 29 30 31</file>
                 </tool>
             </inputs>
         </file>
@@ -119,7 +96,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 6 7 19 18 17 16 5 27 23 28 29 30 31 38</file>
+                    <file> 6 7 19 18 17 16 3 27 23 28 29 30 31 38</file>
                 </tool>
             </inputs>
         </file>
@@ -142,7 +119,30 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 5 27 6 7 19 18 17 16 23 28 29 30 31</file>
+                    <file> 3 27 6 7 19 18 17 16 23 28 29 30 31</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\delay.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 13</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 5</file>
                 </tool>
             </inputs>
         </file>

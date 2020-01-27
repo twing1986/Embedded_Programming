@@ -983,7 +983,7 @@
                     <item>w</item>
                     <item>w2</item>
                     <item>t</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
